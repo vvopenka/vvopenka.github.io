@@ -1,1 +1,44 @@
-theme: jekyll-theme-slate
+name:               "Vasek's Blog"
+# Pagination
+paginate:           5
+paginate_path:      /page:num/
+
+timezone:           Europe/Prague
+permalink:          /:year-:month-:day/:title/
+
+author:
+  github:           "https://github.com/vvopenka/"
+
+# Navigation
+nav:
+  - name:           "About"
+    url:            "/about"
+  - name:           "Tags"
+    url:            "/tags"
+  - name:           "Github"
+    url:            "https://github.com/vvopenka/vvopenka.github.io"
+
+# Sass
+sass:
+  sass_dir:         _sass
+  style:            :compressed
+
+# Scopes
+defaults:
+  -
+    scope:
+      path:         ""
+      type:         "pages"
+    values:
+      layout:       "page"
+  -
+    scope:
+      path:         ""
+      type:         "posts"
+    values:
+      layout:       "post"
+
+# jekyll-seo-tag, see: http://www.rubydoc.info/gems/jekyll-seo-tag/1.2.0
+gems:
+  - jekyll-seo-tag
+  - jekyll-paginate
